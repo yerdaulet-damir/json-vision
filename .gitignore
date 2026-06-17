@@ -1,0 +1,54 @@
+# ── Dependencies & build output ───────────────────────────────
+node_modules
+dist
+dist-ssr
+extension/dist
+extension/media
+*.local
+*.tsbuildinfo
+
+# ── Extension packages ────────────────────────────────────────
+*.vsix
+.vscode-test/
+
+# ══════════════════════════════════════════════════════════════
+#  DATA SAFETY — never commit real datasets.
+#  Only the tiny synthetic demo (sample.jsonl) is allowed through.
+# ══════════════════════════════════════════════════════════════
+*.jsonl
+*.ndjson
+!sample.jsonl
+/data/
+/datasets/
+*.csv
+*.parquet
+*.avro
+
+# ── Logs ──────────────────────────────────────────────────────
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Editor / OS ───────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Test artifacts ────────────────────────────────────────────
+.playwright-mcp/
+test-results/
+
+# ── Private / internal docs (never publish go-to-market strategy) ─
+docs/GROWTH.md
+*.private.md

@@ -1,0 +1,88 @@
+{
+  "name": "json-vision",
+  "displayName": "JSON Vision — Large JSON / JSONL Viewer (no freeze)",
+  "description": "Open multi-GB JSON, JSONL & NDJSON in VS Code without freezing. Streams huge files from disk and shows them as virtualized tables, posts & schema graphs with live search, filter and sort. 100% local — your data never leaves your machine.",
+  "version": "0.1.0",
+  "publisher": "aimyerdaulet",
+  "license": "MIT",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": ["Visualization", "Data Science"],
+  "keywords": ["json", "jsonl", "ndjson", "json viewer", "json visualizer", "large file", "big data", "log viewer", "table", "data viewer"],
+  "galleryBanner": {
+    "color": "#0b1020",
+    "theme": "dark"
+  },
+  "qna": "marketplace",
+  "sponsor": {
+    "url": "https://github.com/sponsors/yerdaulet-damir"
+  },
+  "homepage": "https://github.com/yerdaulet-damir/json-vision#readme",
+  "bugs": {
+    "url": "https://github.com/yerdaulet-damir/json-vision/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yerdaulet-damir/json-vision"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "jsonVision.editor",
+        "displayName": "JSON Vision",
+        "selector": [
+          { "filenamePattern": "*.jsonl" },
+          { "filenamePattern": "*.ndjson" },
+          { "filenamePattern": "*.json" }
+        ],
+        "priority": "option"
+      }
+    ],
+    "commands": [
+      {
+        "command": "jsonVision.open",
+        "title": "Open in JSON Vision",
+        "category": "JSON Vision"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "jsonVision.open",
+          "when": "resourceExtname == .jsonl || resourceExtname == .ndjson || resourceExtname == .json",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "jsonVision.open",
+          "when": "resourceExtname == .jsonl || resourceExtname == .ndjson || resourceExtname == .json",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build:web": "cd .. && vite build --outDir extension/media --emptyOutDir",
+    "build:host": "node esbuild.js",
+    "build": "npm run build:web && npm run build:host",
+    "watch:host": "node esbuild.js --watch",
+    "package": "npm run build && vsce package",
+    "publish:vsce": "npm run build && vsce publish",
+    "publish:ovsx": "npm run build && ovsx publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.84.0",
+    "@vscode/vsce": "^3.2.0",
+    "esbuild": "^0.24.0",
+    "ovsx": "^0.10.0",
+    "typescript": "^5.4.0"
+  }
+}

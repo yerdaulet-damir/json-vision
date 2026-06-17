@@ -1,0 +1,31 @@
+name: 🐛 Bug report
+description: Something broke or a file didn't open
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: File shape & size
+      description: e.g. "JSONL, ~1.2 GB, ~4M lines, nested tweet objects". Do NOT paste private data.
+    validations:
+      required: true
+  - type: dropdown
+    id: editor
+    attributes:
+      label: Where?
+      options: [VS Code, Antigravity, Cursor, Windsurf, VSCodium, Web app]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: JSON Vision version
+    validations:
+      required: false

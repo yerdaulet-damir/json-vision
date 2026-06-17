@@ -1,0 +1,4 @@
+{"id": "usr_1", "name": "Alex", "role": "admin", "metadata": {"lastLogin": "2026-06-15", "theme": "dark"}}
+{"id": "usr_2", "name": "Elena", "role": "editor", "metadata": {"lastLogin": "2026-06-16", "theme": "light"}}
+{"id": "usr_3", "name": "Mike", "role": "viewer", "metadata": {"lastLogin": "2026-06-17", "theme": "system"}}
+{"id": "usr_4", "name": "Sarah", "role": "editor", "metadata": {"lastLogin": "2026-06-14", "theme": "dark"}}
