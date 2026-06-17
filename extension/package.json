@@ -2,15 +2,29 @@
   "name": "json-vision",
   "displayName": "JSON Vision - Large JSON & JSONL Viewer",
   "description": "View large JSON, JSONL and NDJSON files without freezing. Streams big files from disk and shows them as tables, posts, trees and schema graphs, with live search, filter and sort. Fully local.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "aimyerdaulet",
   "license": "MIT",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.84.0"
   },
-  "categories": ["Visualization", "Data Science"],
-  "keywords": ["json", "jsonl", "ndjson", "json viewer", "json visualizer", "large file", "big data", "log viewer", "table", "data viewer"],
+  "categories": [
+    "Visualization",
+    "Data Science"
+  ],
+  "keywords": [
+    "json",
+    "jsonl",
+    "ndjson",
+    "json viewer",
+    "json visualizer",
+    "large file",
+    "big data",
+    "log viewer",
+    "table",
+    "data viewer"
+  ],
   "galleryBanner": {
     "color": "#0b1020",
     "theme": "dark"
@@ -32,9 +46,15 @@
         "viewType": "jsonVision.editor",
         "displayName": "JSON Vision",
         "selector": [
-          { "filenamePattern": "*.jsonl" },
-          { "filenamePattern": "*.ndjson" },
-          { "filenamePattern": "*.json" }
+          {
+            "filenamePattern": "*.jsonl"
+          },
+          {
+            "filenamePattern": "*.ndjson"
+          },
+          {
+            "filenamePattern": "*.json"
+          }
         ],
         "priority": "option"
       }
