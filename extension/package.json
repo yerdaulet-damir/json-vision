@@ -1,7 +1,7 @@
 {
   "name": "json-vision",
-  "displayName": "JSON Vision — Large JSON / JSONL Viewer (no freeze)",
-  "description": "Open multi-GB JSON, JSONL & NDJSON in VS Code without freezing. Streams huge files from disk and shows them as virtualized tables, posts & schema graphs with live search, filter and sort. 100% local — your data never leaves your machine.",
+  "displayName": "JSON Vision - Large JSON & JSONL Viewer",
+  "description": "View large JSON, JSONL and NDJSON files without freezing. Streams big files from disk and shows them as tables, posts, trees and schema graphs, with live search, filter and sort. Fully local.",
   "version": "0.1.0",
   "publisher": "aimyerdaulet",
   "license": "MIT",
@@ -16,9 +16,6 @@
     "theme": "dark"
   },
   "qna": "marketplace",
-  "sponsor": {
-    "url": "https://github.com/sponsors/yerdaulet-damir"
-  },
   "homepage": "https://github.com/yerdaulet-damir/json-vision#readme",
   "bugs": {
     "url": "https://github.com/yerdaulet-damir/json-vision/issues"
